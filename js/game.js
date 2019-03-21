@@ -11,47 +11,71 @@ var rightwButton = document.querySelector('button.btn-right-white');
 //if key pressed
 var keys = document.querySelector('html');
 var bob = {
-    x = 1;
-    y = 1;
-}
+    x: 0,
+    y: 0
+};
+
 var alice = {
-    x = 9;
-    y = 9;
+    x: 7,
+    y: 7
+};    
+
+function updatePlayerPosition() {
+    // Ensure they don't fall off the end of the Earth
+    bob.x = Math.min(Math.max(bob.x, 0), 7);
+    bob.y = Math.min(Math.max(bob.y, 0), 7);
+    alice.x = Math.min(Math.max(alice.x, 0), 7);
+    alice.y = Math.min(Math.max(alice.y, 0), 7);
+
+    console.log(bob)
+    console.log(alice)
+
+    var b = document.getElementsByClassName('bob')[0];
+    b.style.gridRowStart = bob.y+1;
+    b.style.gridColumnStart = bob.x+1;
+
+    var a = document.getElementsByClassName('alice')[0];    
+    a.style.gridRowStart = alice.y+1;
+    a.style.gridColumnStart = alice.x+1;
 }
-var g = document.getElementsByClassName('player bob');
-    console.log(g[0].style);
-    g[0].style.display = "grid";
-    g[0].style.gridRowStart = bob.x;
+
+updatePlayerPosition();
+
 //functions for moving gold
 function MoveUpg(){
-    console.log("upg");
-    
-    
-    g[0].style.gridRowStart = bob.x += 1;
-
+    bob.y--;
+    updatePlayerPosition();
 }
 function MoveDowng(){
-    console.log("downg");
+    bob.y++;
+    updatePlayerPosition();
+
 }
 function MoveLeftg(){
-    console.log("leftg");
+    bob.x--;
+    updatePlayerPosition();
 }
 function MoveRightg(){
-    console.log("rightg");
+    bob.x++;
+    updatePlayerPosition();
 }
 
 //functions for moving white
 function MoveUpw(){
-    console.log("upw");
+    alice.y--;
+    updatePlayerPosition();
 }
 function MoveDownw(){
-    console.log("downw");
+    alice.y++;
+    updatePlayerPosition();
 }
 function MoveLeftw(){
-    console.log("leftw");
+    alice.x--;
+    updatePlayerPosition();
 }
 function MoveRightw(){
-    console.log("rightw");
+    alice.x++;
+    updatePlayerPosition();
 }
 //if glod buttons are clicked
 upgButton.onclick = function() {
