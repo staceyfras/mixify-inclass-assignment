@@ -1,47 +1,94 @@
 body {
-    margin: 40px;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    /* grid-template-rows: repeat(8, 1fr); */
-    grid-auto-rows: 100px;
-    grid-gap: 20px;
-  }
-  
-  .box {
-    background-image: url("../img/tile-1.png");
-    /* background-color: #444; */
-    color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    font-size: 150%;
-  }
+	background: url(/img/bg.png) no-repeat cover;
+  margin: 15px;
+}
+
+.game {
+  position: relative;
+  width: 40vw;
+  height: 40vw;
+  min-width: 300px;
+  min-height: 300px;
+  margin: 0 auto; /* Center to screen */
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 40vw 1fr;
+}
+
+.bg-grid, .player-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-tile {
+  background: url(/img/tile-5.png);
+  grid-column: 1 / 9;
+  grid-row: 1 / 9;
+}
+
+.alice {
+  background: url(/img/cat.png) center center / cover;
+}
+
+.bob {
+  background: url(/img/dog.png) center center / cover;
+}
+
+/* Welcome + Message */
+.messages{
+	font-family: 'Margarine', cursive;
+}
+.messages footer {
+	padding-top: 25px;
+	font-size: 12px;
+}
+
+/* Controls */
+button {
+  border-style: none;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  width: 50vw;
+  margin: 0 auto;
+  grid-column: 2 / 2;
+}
 
 /* Sprites */
 .btn-right-gold {
-  background: url('/img/buttons.png') no-repeat -363px -803px;
-  width: 216px;
-  height: 230px;
+  background: url('/img/buttons.png') no-repeat -108px -240px;
+  width: 66px;
+  height: 70px;
 }
 
 .btn-left-gold {
-	background: url('/img/buttons.png') no-repeat -363px -1064px;
-	width: 216px;
-	height: 230px;
+	background: url('/img/buttons.png') no-repeat -108px -319px;
+	width: 66px;
+  height: 70px;
 }
 
 .btn-up-gold {
-	background: url('/img/buttons.png') no-repeat -363px -1324px;
-	width: 216px;
-	height: 230px;
+	background: url('/img/buttons.png') no-repeat -108px -397px;
+	width: 66px;
+  height: 70px;
 }
 
 .btn-down-gold {
-	background: url('/img/buttons.png') no-repeat -363px -1585px;
-	width: 216px;
-	height: 230px;
+	background: url('/img/buttons.png') no-repeat -108px -475px;
+	width: 66px;
+  height: 70px;
 }
 .btn-grid-gold {
 	display: grid;
@@ -58,27 +105,27 @@ body {
 }
 
 .btn-right-white {
-	background: url('/img/buttons.png') no-repeat -116px -803px;
-	width: 215px;
-	height: 230px;
+	background: url('/img/buttons.png') no-repeat -34px -240px;
+	width: 66px;
+  height: 70px;
 }
 
 .btn-left-white {
-	background: url('/img/buttons.png') no-repeat -116px -1064px;
-	width: 215px;
-	height: 230px;
+	background: url('/img/buttons.png') no-repeat -34px -319px;
+	width: 66px;
+  height: 70px;
 }
 
 .btn-up-white {
-	background: url('/img/buttons.png') no-repeat -116px -1324px;
-	width: 215px;
-	height: 230px;
+	background: url('/img/buttons.png') no-repeat -34px -397px;
+	width: 66px;
+  height: 70px;
 }
 
 .btn-down-white {
-	background: url('/img/buttons.png') no-repeat -116px -1585px;
-	width: 215px;
-	height: 230px;
+	background: url('/img/buttons.png') no-repeat -34px -397px;
+	width: 66px;
+  height: 70px;
 }
 
 .btn-grid-white {
@@ -94,10 +141,4 @@ body {
 .btn-grid-white button:first-child {
   grid-row: 1 / 1;
   grid-column: 1 / 4;
-}
-
-.controls {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
 }

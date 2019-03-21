@@ -4,107 +4,50 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Margarine" rel="stylesheet"> 
 </head>
 
 <body>
-    <div class="grid">
-        <div class="box 1">1</div>
-        <div class="box 2">2</div>
-        <div class="box 3">3</div>
-        <div class="box 4">4</div>
-        <div class="box 5">5</div>
-        <div class="box 6">6</div>
-        <div class="box 7">7</div>
-        <div class="box 8">8</div>
-    </div>
-    <div class="grid">
-        <div class="box 9">9</div>
-        <div class="box 10">10</div>
-        <div class="box 11">11</div>
-        <div class="box 12">12</div>
-        <div class="box 13">13</div>
-        <div class="box 14">14</div>
-        <div class="box 15">15</div>
-        <div class="box 16">16</div>
-    </div>
-    <div class="grid">
-        <div class="box 17">17</div>
-        <div class="box 18">18</div>
-        <div class="box 19">19</div>
-        <div class="box 20">20</div>
-        <div class="box 21">21</div>
-        <div class="box 22">22</div>
-        <div class="box 23">23</div>
-        <div class="box 24">24</div>
-    </div>
-    <div class="grid">
-        <div class="box 1">25</div>
-        <div class="box 2">26</div>
-        <div class="box 3">27</div>
-        <div class="box 4">28</div>
-        <div class="box 5">29</div>
-        <div class="box 6">30</div>
-        <div class="box 7">31</div>
-        <div class="box 8">32</div>
-    </div>
-    <div class="grid">
-        <div class="box 1">1</div>
-        <div class="box 2">2</div>
-        <div class="box 3">3</div>
-        <div class="box 4">4</div>
-        <div class="box 5">5</div>
-        <div class="box 6">6</div>
-        <div class="box 7">7</div>
-        <div class="box 8">8</div>
-    </div>
-    <div class="grid">
-        <div class="box 9">9</div>
-        <div class="box 2">10</div>
-        <div class="box 3">11</div>
-        <div class="box 4">12</div>
-        <div class="box 5">13</div>
-        <div class="box 6">14</div>
-        <div class="box 7">15</div>
-        <div class="box 8">16</div>
-    </div>
-    <div class="grid">
-        <div class="box 1">17</div>
-        <div class="box 2">18</div>
-        <div class="box 3">19</div>
-        <div class="box 4">20</div>
-        <div class="box 5">21</div>
-        <div class="box 6">22</div>
-        <div class="box 7">23</div>
-        <div class="box 8">24</div>
-    </div>
-    <div class="grid">
-        <div class="box 1">25</div>
-        <div class="box 2">26</div>
-        <div class="box 3">27</div>
-        <div class="box 4">28</div>
-        <div class="box 5">29</div>
-        <div class="box 6">30</div>
-        <div class="box 7">31</div>
-        <div class="box 8">32</div>
-    </div>
-
-
-    <div class="controls">
-        <!-- gold -->
-        <div class="btn-grid-gold">
-            <button class="btn-up-gold"></button>
-            <button class="btn-left-gold"></button>
-            <button class="btn-down-gold"></button>
-            <button class="btn-right-gold"></button>
+    <div class="game-container">
+        <div class="messages">
+            <h1>Welcome!</h1>
+            <h3>Instructions:</h3>
+            <p>Move the characters by either clicking on the arrow buttons with your mouse, or 
+                using the keyboard controls 'W A S D' for the gold buttons and 'I J K L' for the silver buttons.</p>
         </div>
 
-        <!-- white -->
-        <div class="btn-grid-white">
-            <button class="btn-up-white"></button>
-            <button class="btn-left-white"></button>
-            <button class="btn-down-white"></button>
-            <button class="btn-right-white"></button>
+        <div class="game">
+            <div class="bg-grid">
+                <div class="bg-tile"></div>
+            </div>
+                
+            <div class="player-grid">
+                <div class="player alice"></div>
+                <div class="player bob"></div>
+            </div>
         </div>
+
+        <div class="controls">
+            <!-- gold -->
+            <div class="btn-grid-gold">
+                <button class="btn-up-gold"></button>
+                <button class="btn-left-gold"></button>
+                <button class="btn-down-gold"></button>
+                <button class="btn-right-gold"></button>
+            </div>
+    
+            <!-- white -->
+            <div class="btn-grid-white">
+                <button class="btn-up-white"></button>
+                <button class="btn-left-white"></button>
+                <button class="btn-down-white"></button>
+                <button class="btn-right-white"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="messages">
+        <footer>Brought to you by Mixify™ 🍹🥂</footer>
     </div>
 
     <script src="js/game.js"></script>
